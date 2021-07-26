@@ -36,7 +36,7 @@ jobs:
           without other files. Then run:"
           unzip "*.z??.zip"
           cat livecd-${{ steps.tag.outputs.tag }}-mbp.z?? > cd.zip
-          echo unzip cd.zip
+          unzip cd.zip
           EOF
       - name: Release
         if: github.ref == 'refs/heads/master'
